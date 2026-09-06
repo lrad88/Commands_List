@@ -38,6 +38,8 @@ sudo dnf group install "python-classroom" - installs group
 sudo dnf upgrade --refresh - updates all programs on your system
 modinfo -F version nvidia -- gives you nvidia version or other program versions
 snap run pycharm-community
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target - turn off sleep, hibernate etc
+systemctl list-unit-files | grep -E 'sleep|suspend|hibernate' -check sleep hibernate status
 
 FILE MANIPULATION
 ----------------------------------------------------------------------------------------------------
@@ -81,7 +83,7 @@ sudo dnf group info - gives info on group and installed files
 sudo dnf group list --hidden - shows groups that are not fully verified or partial
 dnf list *nvidia* shows the entire dnf download library with *nvidia in it
 
-neofetch - runs neofetch   
+neofetch, fastfetch - runs neofetch   
 upower --enumerate - lists laptop power sources
 upower, sensors, pwmconfig - system sensor info
 sudo sensors-detect - lm-sensors settings
