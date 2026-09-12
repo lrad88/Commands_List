@@ -76,3 +76,10 @@ sudo dnf install --allowerasing ./tryx-panorama-manager-*.fc*.x86_64.rpm
  
 sudo dnf install ffmpeg adb libusb1 qt6-qtbase qt6-qtdeclarative -y
 
+sudo dnf copr enable codifryed/CoolerControl
+
+sudo dnf install coolercontrol
+
+ sudo dnf install SDL2 jstest-gtk
+
+sudo dnf install xdotool 

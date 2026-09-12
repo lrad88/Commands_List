@@ -13,6 +13,7 @@ kitten themes - kitty customization
 
 LINUX COMMANDS
 ----------------------------------------------------------------------------------------------------
+sudo dnf upgrade kernel* --refresh - upgrade to latest linux kernel
 firefox --new-tab --url www.google.com
 tail - open a file
 sudo dnf install pkg - install a file
@@ -76,7 +77,8 @@ SYSTEM CONFIG
 ---------------------------------------------------------------------------------------------------
 
 fwupd - checks for latest firmware updates
-fwupdmgr get-devices  -  shows more details 
+fwupdmgr get-devices  -  shows more details
+groups - shows what groups you have permissions for 
 
 sudo dnf group list - shows a whole bunch of packages to install as groups
 sudo dnf group info - gives info on group and installed files
@@ -106,13 +108,13 @@ picom -C, picom -G - disables shoadow effects
 picom -c -enable shadow effects
 picom --backend (egl, glx, xrender, dummy) - chnage the renderinf medium of picom
 
+AUDIO
+=========================================================
 pavucontrol - better gui audio control easy to use
 amixer set 'Master' 10% - puts volume to 10%                    
-
 alsamixer - visual of basic mixer
 easyeffects - boost your volume preset alot
 easy effects -q - to quit
-=======
 man amixer - amixer manual
 amixer | less - mixer volumes and capabilities
 amixer info - gives simple audio overview
@@ -122,7 +124,7 @@ amixer controls - shows all amixer controls
 aplay -l - lists all avilable audio playback devices
 speaker-test -D hw:0,3 -c2 -t wav - sends a wav to specifically the hdmi audio output on the nvidia gfx card
 alsamixer - open alsamixer
-
+wpctl status - displays a list of all active audio and video devices nodes and sinks amanages by pipewire
 uname -r - check version of os                                
 uname -a - check kernel version
 echo $XDG_SESSION_TYPE - will show you ther visual driver you are using eg. tty, weyland, X11  
@@ -133,8 +135,9 @@ sudo killall shutdown - cancel shutdown timer
 btop, top, htop - system monitors
 lspci, glxinfo, lshw - chipset info
 
-pkill -9 -f tryx-panorama && dbus-run-session -- /home/(user)/Tryx-Linux-GUI/build/runtime/tryx-panorama-runtime - start a dbus run session for tryx-panorama
-/home/(user)/Tryx-Linux-GUI/build/quick/tryx-panorama-manager - run tryx panorama manager
+pkill -9 -f tryx-panorama && dbus-run-session -- /home/(user)/Tryx-Linux-GUI/build/runtime/tryx-panorama-runtime - start a dbus run session for tryx-panorama, add user
+/home/(user)/Tryx-Linux-GUI/build/quick/tryx-panorama-manager - run tryx panorama manager, add user
+dbus-run-session -- /usr/lib/tryx-panorama-manager/tryx-panorama-runtime --upload ~/Downloads/gifs/lol.jpg - another way to upload media
 ----------------------------------------------------------------------------------------------------
 
 MEDIA DEVICES
